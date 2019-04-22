@@ -1,7 +1,18 @@
 [package]
-name = "LioRedix"
+name = "lio-redux"
 version = "0.1.0"
 authors = ["Malivix <mza2rintareh@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+bootloader = "0.5.1"
+
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[package.metadata.bootimage]
+default-target = "targets/x86_64-lioreidx.json"
